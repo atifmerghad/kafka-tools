@@ -48,3 +48,9 @@ esac
 
 echo -e "[=================================================================]"
 ```
+
+## Run script 
+
+> `chmod +x kafka-tools.sh`   
+> `./kafka-tools.sh`
+
