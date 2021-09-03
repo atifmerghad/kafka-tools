@@ -41,6 +41,11 @@ case $operation in
         read topic_name
         $CONFLUENT_HOME/bin/kafka-console-consumer  -bootstrap-server $BOOTSTRAP_SERVER --consumer.config $KAFKA_PROPERTIES --topic $topic_name
         ;;
+    'DESCRIBE')
+        echo -n " - DESCRIBE > PLEASE ENTER A TOPIC NAME : "
+        read topic_name
+        $CONFLUENT_HOME/bin/kafka-topics --describe --bootstrap-server $BOOTSTRAP_SERVER --command-config $KAFKA_PROPERTIES --topic $topic_name
+        ;;        
     *)
         echo "PLEASE ENTER A VALID OPERATION !"
         ;;
