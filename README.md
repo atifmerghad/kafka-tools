@@ -7,6 +7,7 @@ This script will help you to perform basic tasks in Kafka without copying/pastin
 3. Delete a topic
 4. Produce data to a topic
 5. Consume data from a topic
+6. Describe a topic
 
 ```
 #!/bin/bash
