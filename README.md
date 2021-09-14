@@ -46,7 +46,12 @@ case $operation in
         echo -n " - DESCRIBE > PLEASE ENTER A TOPIC NAME : "
         read topic_name
         $CONFLUENT_HOME/bin/kafka-topics --describe --bootstrap-server $BOOTSTRAP_SERVER --command-config $KAFKA_PROPERTIES --topic $topic_name
-        ;;        
+        ;;    
+     'ACL')
+        echo -n " - ACL > PLEASE ENTER A TOPIC NAME : "
+        read topic_name
+        $CONFLUENT_HOME/bin/bin/kafka-acls --bootstrap-server $BOOTSTRAP_SERVER --command-config $KAFKA_PROPERTIES --list --topic $topic_name
+        ;;   
     *)
         echo "PLEASE ENTER A VALID OPERATION !"
         ;;
