@@ -61,6 +61,20 @@ esac
 echo -e "[=================================================================]"
 ```
 
+Configuration file (Please change values based on your security mechanism) :
+<ul>
+  <li>--consumer.config</li>
+  <li>--command-config</li>
+  <li>--producer.config</li>
+</ul>
+
+```
+security.protocol=SASL_SSL
+sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="admin" password="password";
+ssl.endpoint.identification.algorithm=https
+sasl.mechanism=PLAIN
+```
+
 ## Run script 
 
 > `chmod +x kafka-tools.sh`   
